@@ -38,10 +38,10 @@ function Navbars() {
               <Nav className="d-flex flex-column flex-lg-row gap-2 w-100">
                 <div className="d-flex flex-column flex-sm-row gap-2 justify-content-between w-100">
                   <div className="d-flex gap-2">
-                    <Button variant="primary" size="md" href="#how-to-apply" className="border w-100 w-sm-auto">
+                    <Button variant="light" size="md" href="#how-to-apply" className="border w-100 w-sm-auto">
                       How to Apply
                     </Button>
-                    <Button variant="primary" size="md" href="#apply-coach" className="border w-100 w-sm-auto">
+                    <Button variant="light" size="md" href="#apply-coach" className="border w-100 w-sm-auto">
                       Apply to Coach
                     </Button>
                   </div>
@@ -54,10 +54,13 @@ function Navbars() {
               </Nav>
 
               {/* Phone section (desktop only) */}
-              <div className="d-none d-lg-flex align-items-center">
-                <FontAwesomeIcon icon={faPhone} className="me-2 text-success" />
-                <span className="fw-bold text-dark">+234 812 345 6789</span>
-              </div>
+<div className="d-flex align-items-center">
+  <FontAwesomeIcon icon={faPhone} className="me-2 text-success" />
+  <a href="tel:+2348166927834" className="fw-bold text-dark text-decoration-none">
+    +2348155933201
+  </a>
+</div>
+
 
               {/* Login Button */}
               <div>
