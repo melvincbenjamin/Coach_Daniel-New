@@ -32,7 +32,7 @@ function LoginModal({ show, handleClose }) {
               <Form.Control type="password" placeholder="Password" />
             </Form.Group>
 
-            <Button variant="primary" type="submit" className="w-100">
+            <Button variant="primary" type="submit" className="w-100 text-black">
               Login
             </Button>
           </Form>
