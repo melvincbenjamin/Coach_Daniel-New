@@ -10,7 +10,6 @@ function Home() {
         <meta name="keywords" content="Nigerian Tennis, Tennis Players in Nigeria, Tennis Tournaments Nigeria, Tennis Sponsorships, Nigerian sports" />
         <meta name="author" content="Melvin Benjamin" />
       </Helmet>
-
       <div>
         <HeroSection />
       </div>

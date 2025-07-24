@@ -1,14 +1,33 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbars from './components/Navbars';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from '../src/components/Footer';
+
+// Import your pages
 import Home from './pages/Home';
+import About from './pages/About';
+import Media from './pages/Media';
+import Services from './pages/Services';
+import Testimonial from './pages/Testimonial';
+import Contact from './pages/Contact';
 
 function App() {
   return (
-    <div style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
+    <Router>
       <Navbars />
-      <Home />
-    </div>
+      <div style={{ position: 'relative', minHeight: '100vh', paddingTop: '56px' }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/media" element={<Media />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/testimonials" element={<Testimonial />} />
+          <Route path="/contacts" element={<Contact />} />
+        </Routes>
+      </div>
+      <Footer />  {/* Footer Added Here */}
+    </Router>
   );
 }
 
