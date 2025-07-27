@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Row, Col, Button, Container, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-
+import vision from "../assets/emma-raducanu-lta-youth-ambassador.webp";
+import mission from "../assets/paddle-racket-ball-ready-play-260nw-2518995793.webp";
 import DanielLittleKid from "../assets/DanielLittleGirl.mp4";
 import HeroImage from "../assets/With_Kids.jpg";
 
@@ -111,21 +112,37 @@ function HeroSection() {
     </div>
 
 <div className="container py-4">
-  <div className="row">
-    <div className="col-12" style={{ fontFamily: 'Poppins, sans-serif' }}>
-      <h3 className="fw-bold text-center text-black">Mission</h3>
-      <p className="text-black text-center mt-3">
-        To empower individuals of all ages and skill levels through high-quality Tennis and Padel coaching, fostering discipline, confidence, and excellence both on and off the court. At Dennis Tennis Academy, my goal is to nurture talent, inspire growth, and build a strong community of passionate athletes.</p>
+  <div className="row align-items-center mb-5">
+    {/* Mission Text */}
+    <div className="col-md-6 mb-4 mb-md-0" style={{ fontFamily: 'Poppins, sans-serif' }}>
+      <h2 className="fw-bold text-black text-center text-md-start">Mission</h2>
+      <p className="text-black mt-3 text-center text-md-start">
+        To empower individuals of all ages and skill levels through high-quality Tennis and Padel coaching, fostering discipline, confidence, and excellence both on and off the court. At Dennis Tennis Academy, my goal is to nurture talent, inspire growth, and build a strong community of passionate athletes.
+      </p>
     </div>
 
-    <div className="col-12 mt-5" style={{ fontFamily: 'Poppins, sans-serif' }}>
-      <h3 className="fw-bold text-center text-black">Vision</h3>
-      <p className="text-black text-center mt-3">
+    {/* Mission Image */}
+    <div className="col-md-6 text-center">
+      <img src={mission} alt="Mission" className="img-fluid rounded" />
+    </div>
+  </div>
+
+  <div className="row align-items-center">
+
+    {/* Vision Text */}
+    <div className="col-md-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
+      <h2 className="fw-bold text-black text-center text-md-start">Vision</h2>
+      <p className="text-black mt-3 text-center text-md-start">
         To become a globally recognized Tennis and Padel coaching leader, originating from Nigeria, based in Dubai, and expanding across the world, especially the United States by building a network of elite athletes, passionate learners, and inclusive sports communities united by excellence, mentorship, and love for the game.
       </p>
     </div>
+    {/* Vision Image */}
+    <div className="col-md-6 text-center order-md-2 mb-4 mb-md-0">
+      <img src={vision} alt="Vision" className="img-fluid rounded" />
+    </div>
   </div>
 </div>
+
 
       {/* === VIDEO GALLERY SECTION BELOW HERO === */}
       <Container style={{ paddingTop: 20 }}>

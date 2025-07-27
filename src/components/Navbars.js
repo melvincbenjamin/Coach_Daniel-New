@@ -4,6 +4,8 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Logo from '../assets/Logo.jpg';
+import LocationDetector from "./LocationDetector";
+
 
 function Navbars() {
   const [expanded, setExpanded] = useState(false);
@@ -47,6 +49,7 @@ function Navbars() {
           </Nav>
         </Navbar.Collapse>
       </Container>
+      <LocationDetector />
     </Navbar>
   );
 }
