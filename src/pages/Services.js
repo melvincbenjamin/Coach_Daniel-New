@@ -8,9 +8,10 @@ import racketvspadel from '../assets/racketvspadel.webp';
 import Coach_Daniel from '../assets/Coach_Daniel.jpg';
 import WithKids2 from '../assets/WithKids2.mp4';
 import { Container, Row, Col, Carousel, Card } from "react-bootstrap";
-import { PlayCircle, CameraVideo } from "react-bootstrap-icons";
+import { GiTennisBall } from "react-icons/gi";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import DennisServices from "../pages/DennisServices";
 
 function ServicesComponent() {
   useEffect(() => {
@@ -18,16 +19,20 @@ function ServicesComponent() {
   }, []);
 
   return (
+    <div> 
+      <div>
+        <DennisServices />
+      </div>
     <section id="services" className="py-5" style={{ backgroundColor: "#ffffff" }}>
       <Container>
-        <h6 className="text-center text-muted">Coach Dennis Offers</h6>
+        <h6 className="text-center text-muted">My Services</h6>
         <h2 className="text-center fw-bold mb-5" style={{ color: "#000" }}>Tennis & Padel Coaching</h2>
         <Row className="gy-4">
           {/* Tennis Coaching */}
           <Col xs={12} md={4} data-aos="fade-up">
             <Card className="text-center border-0 shadow-sm service-card h-100 bg-black">
               <div className="icon-title-section">
-                <PlayCircle size={30} className="text-white" />
+                <GiTennisBall size={30} color="#32CD32" />
                 <Card.Title className="fw-bold fs-6 text-white mb-0">Tennis Coaching</Card.Title>
               </div>
               <Card.Body>
@@ -52,7 +57,7 @@ function ServicesComponent() {
           <Col xs={12} md={4} data-aos="fade-up">
             <Card className="text-center border-0 shadow-sm service-card h-100 bg-black">
               <div className="icon-title-section">
-                <PlayCircle size={30} className="text-white" />
+                <GiTennisBall size={30} color="#32CD32" />
                 <Card.Title className="fw-bold fs-6 text-white mb-0">Padel Coaching</Card.Title>
               </div>
               <Card.Body>
@@ -77,7 +82,7 @@ function ServicesComponent() {
   <Card className="text-center border-0 shadow-lg service-card h-100 bg-black">
     {/* Title Section */}
     <div className="icon-title-section">
-      <CameraVideo size={30} className="text-white" />
+      <GiTennisBall size={30} color="#32CD32" />
       <Card.Title className="fw-bold fs-6 text-white mb-0">Videos & Pictures</Card.Title>
     </div>
 
@@ -163,6 +168,7 @@ function ServicesComponent() {
         `}</style>
       </Container>
     </section>
+    </div>
   );
 }
 

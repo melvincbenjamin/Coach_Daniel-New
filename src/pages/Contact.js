@@ -43,7 +43,7 @@ function Contact() {
             </p>
             <p>
               <Instagram className="me-1 text-danger" size={20} />
-              <a href="https://www.instagram.com/iammelvin__mel?igsh=cTNhNTByczBrYW1n&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-black">Instagram</a>
+              <a href="https://www.instagram.com/denistennis_?utm_source=qr&igsh=MWI0dHB2NjB0dXlyZg==" target="_blank" rel="noopener noreferrer" className="text-black">Instagram</a>
             </p>
           </Col>
 

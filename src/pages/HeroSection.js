@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Row, Col, Button, Container, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 
 import DanielLittleKid from "../assets/DanielLittleGirl.mp4";
 import HeroImage from "../assets/With_Kids.jpg";
@@ -9,6 +10,8 @@ import DanielVideo1 from '../assets/DanielVideo1.mp4';
 import DanielVideo2 from '../assets/DanielVideo2.mp4';
 //import DanielVideo3 from '../assets/DanielVideo3.mp4';
 import DanielVideo4 from '../assets/DanielVideo4.mp4';
+import backgroundImage from '../assets/backgroundImage.jpg'; // adjust path as needed
+
 
 function HeroSection() {
   const [showVideo, setShowVideo] = useState(false);
@@ -23,6 +26,12 @@ function HeroSection() {
 
   return (
     <div>
+       <Helmet>
+        <title>Coach Dennis | Tennis & Padel Coach</title>
+        <meta name="description" content="Official site of Coach Dennis – a Tennis & Padel Coach based in Dubai, originally from Nigeria, offering global sports mentorship and training." />
+        <meta name="keywords" content="Coach Dennis, Tennis coach Dubai, Padel coach, Tennis Nigeria, Tennis academy, Tennis in UAE, Dubai tennis coach, Tennis lessons" />
+        <link rel="canonical" href="https://yourwebsite.com/about" />
+      </Helmet>
       {/* === HERO FULLSCREEN SECTION === */}
       <section style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
         {/* Background image */}
@@ -66,35 +75,60 @@ function HeroSection() {
       </section>
 
       <div
-  className="text-black d-flex align-items-center justify-content-center"
-  style={{ height: '50vh', backgroundColor: 'rgba(255, 255, 255, 0.8)' }}
->
-  <Container>
-    <div className="text-start text-md-center">
-      <p className="fs-3 fw-semibold">Hello, I’m Coach Dennis.</p>
-      <p className="fs-5">
-        Founder of <span className="fw-bold">Dennis Tennis Academy (DTA)</span> where Tennis and Padel are for everyone.
-      </p>
-      <p className="fs-5">Ready to Play?</p>
-      <p className="fs-6">Book your first lesson today and let’s hit the court!</p>
-      <div className="d-grid d-md-flex justify-content-md-center">
-        <Button
-          variant="dark"
-          size="lg" // default on mobile
-          className="fs-3 fs-md-5 fs-lg-5"
-          href="/contacts"
-        >
-          Book a Session
-        </Button>
+      className="hero-section d-flex align-items-center justify-content-center text-white"
+      style={{
+        height: '80vh',
+        marginTop: '30px',
+    background: `url(${backgroundImage}) center/cover no-repeat`,
+
+      }}
+    >
+      <div className="slide-in">
+        <Container>
+          <div className="text-center text-md-center" style={{
+            marginBottom: "100px"
+          }}>
+            <p className="fs-2 mt-5 fw-bold">Hello,</p>
+            <p className="fs-2 fst-italic fw-semibold mb-3">I’m Coach Dennis.</p>
+            <p className="fs-5 mb-3" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              Founder of <span className="fw-bold">Dennis Tennis Academy, (DTA)</span> Where Tennis and Padel are for everyone.
+            </p>
+            <p className="fs-5 mb-2">Ready to Play?</p>
+            <p className="fs-5 mb-4">Book your first lesson today and let’s hit the court!</p>
+            <div className="d-grid d-md-flex justify-content-md-center">
+              <Button
+                variant="dark"
+                size="lg"
+                className="px-5 py-3 fs-5" 
+                href="/contacts"
+              >
+                Book a Session
+              </Button>
+            </div>
+          </div>
+        </Container>
       </div>
     </div>
-  </Container>
+
+<div className="container py-4">
+  <div className="row">
+    <div className="col-12" style={{ fontFamily: 'Poppins, sans-serif' }}>
+      <h3 className="fw-bold text-center text-black">Mission</h3>
+      <p className="text-black text-center mt-3">
+        To empower individuals of all ages and skill levels through high-quality Tennis and Padel coaching, fostering discipline, confidence, and excellence both on and off the court. At Dennis Tennis Academy, my goal is to nurture talent, inspire growth, and build a strong community of passionate athletes.</p>
+    </div>
+
+    <div className="col-12 mt-5" style={{ fontFamily: 'Poppins, sans-serif' }}>
+      <h3 className="fw-bold text-center text-black">Vision</h3>
+      <p className="text-black text-center mt-3">
+        To become a globally recognized Tennis and Padel coaching leader, originating from Nigeria, based in Dubai, and expanding across the world, especially the United States by building a network of elite athletes, passionate learners, and inclusive sports communities united by excellence, mentorship, and love for the game.
+      </p>
+    </div>
+  </div>
 </div>
 
-
-
       {/* === VIDEO GALLERY SECTION BELOW HERO === */}
-      <Container style={{ paddingTop: 10 }}>
+      <Container style={{ paddingTop: 20 }}>
         <motion.h3
           className="text-black text-center mb-4"
           initial={{ opacity: 0, y: -20 }}

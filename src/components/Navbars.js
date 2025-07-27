@@ -40,7 +40,6 @@ function Navbars() {
             onClick={() => setExpanded(false)}
           >
             <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/media">Media</Nav.Link>
             <Nav.Link as={Link} to="/about">About Me</Nav.Link>
             <Nav.Link as={Link} to="/services">Services</Nav.Link>
             <Nav.Link as={Link} to="/testimonials">Testimonials</Nav.Link>

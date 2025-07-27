@@ -3,9 +3,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaWhatsapp, FaFacebook, FaInstagram } from "react-icons/fa";
 import Logo from "../assets/Logo.jpg";
+import LocationDetector from "./LocationDetector";
 
 function Footer() {
   return (
+    <div>
+      <LocationDetector />
     <footer className="text-white py-4 mt-5" style={{ backgroundColor: '#000000'}}>
       <Container>
         <Row className="align-items-center">
@@ -56,6 +59,7 @@ function Footer() {
         </div>
       </Container>
     </footer>
+    </div>
   );
 }
 

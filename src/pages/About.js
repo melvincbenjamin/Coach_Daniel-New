@@ -47,10 +47,7 @@ function AboutSection() {
     }}
   />
 </div>
-
-
 </Col>
-
           {/* Right Section - Text & Cards */}
           <Col xs={12} md={7} data-aos="fade-up" style={{ paddingTop: 20 }}>
             <h6 className="text-uppercase text-secondary">Get to know</h6>
@@ -59,7 +56,7 @@ function AboutSection() {
             {/* About Me Text */}
 <p className="text-black mt-4 mt-md-5" data-aos="slide-right" style={{ fontFamily: 'Times New Roman' }}>
   <span className="text-primary">Coach Dennis, Founder of Dennis Tennis and Padel Academy (DTA).</span>  
-  I am a Certified and Experienced Coach dedicated to helping players of all ages excel in both <strong>Tennis</strong> and <strong>Padel</strong>. At DTA, I provide tailored coaching programs, expert guidance, and hands-on support to ensure every athlete develops their skills, confidence, and love for the game — whether you're a beginner or aiming to compete at a higher level.
+  I am a Certified and Experienced Coach dedicated to helping players of all ages excel in both <strong>Tennis</strong> and <strong>Padel</strong>. At DTA, I provide tailored coaching programs, expert guidance, and hands-on support to ensure every athlete develops their skills, confidence, and love for the game. Whether you're a beginner or aiming to compete at a higher level.
 </p>
             {/* Cards Section */}
             <Row className="mt-4 g-3">

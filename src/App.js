@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbars from './components/Navbars';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from '../src/components/Footer';
+import { HelmetProvider } from 'react-helmet-async';
+
 
 // Import your pages
 import Home from './pages/Home';
@@ -16,6 +18,7 @@ function App() {
   return (
     <Router>
       <Navbars />
+      <HelmetProvider />
       <div style={{ position: 'relative', minHeight: '100vh', paddingTop: '56px' }}>
         <Routes>
           <Route path="/" element={<Home />} />
