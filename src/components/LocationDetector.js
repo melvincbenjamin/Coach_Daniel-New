@@ -1,48 +1,118 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+import { doc, setDoc } from "firebase/firestore";
+import { db } from "../firebase";
 
-const API_KEY = "AIzaSyBVmcgbCteYgqSlTKQL5iHyz3Lhw7a8dCI"; // Paste your Google Maps API Key here
+// Fix marker icon issue
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png",
+  iconUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
+  shadowUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
+});
 
-function LocationDetector() {
-  const [location, setLocation] = useState("Fetching location...");
+const LocationDetector = () => {
+  const [location, setLocation] = useState(null);
+  const [latlng, setLatlng] = useState(null);
 
   useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        async (position) => {
-          const { latitude, longitude } = position.coords;
+    const fetchLocationFromGPS = async (lat, lon) => {
+      try {
+        const response = await fetch(
+          `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lon}&key=dbf643dd05f44e7b884e0e9906f32520`
+        );
+        const data = await response.json();
 
-          try {
-            const response = await axios.get(
-              `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${API_KEY}`
-            );
+        if (data.results && data.results.length > 0) {
+          const components = data.results[0].components;
 
-            const addressComponents = response.data.results[0].address_components;
-            const city = addressComponents.find(c => c.types.includes("locality"))?.long_name || "";
-            const region = addressComponents.find(c => c.types.includes("administrative_area_level_1"))?.long_name || "";
-            const country = addressComponents.find(c => c.types.includes("country"))?.long_name || "";
+          const locationData = {
+            city:
+              components.city ||
+              components.town ||
+              components.village ||
+              components.hamlet ||
+              components.suburb ||
+              components.neighbourhood ||
+              components.municipality ||
+              components.county ||
+              "Unknown",
+            state: components.state || "Unknown",
+            country: components.country || "Unknown",
+          };
 
-            setLocation(`${city}, ${region}, ${country}`);
-          } catch (error) {
-            console.error("Error fetching location:", error);
-            setLocation("Location not available");
-          }
-        },
-        (error) => {
-          console.error("Geolocation error:", error);
-          setLocation("Permission denied or unavailable");
+          console.log("Accurate GPS location:", locationData);
+
+          await setDoc(doc(db, "locations", "coach-dennis"), {
+            ...locationData,
+            lat,
+            lon,
+            timestamp: new Date().toISOString(),
+          });
+
+          setLocation(locationData);
+          setLatlng({ lat, lon });
         }
-      );
-    } else {
-      setLocation("Geolocation not supported");
-    }
+      } catch (error) {
+        console.error("Failed to reverse geocode:", error);
+      }
+    };
+
+    const getGPSLocation = () => {
+      if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const { latitude, longitude } = position.coords;
+            fetchLocationFromGPS(latitude, longitude);
+          },
+          (error) => {
+            console.error("GPS permission denied or unavailable", error);
+          }
+        );
+      } else {
+        console.error("Geolocation not supported by this browser");
+      }
+    };
+
+    getGPSLocation();
   }, []);
 
   return (
-    <div className="text-center text-muted my-3">
-      <small>📍 Current Location: {location}</small>
+    <div className="container mt-5">
+      <h3 className="text-center">Current Location:</h3>
+      {location && latlng ? (
+        <>
+          <p className="text-center fw-bold mt-3">
+            {location.city}, {location.state}, {location.country}
+          </p>
+          <MapContainer
+            center={[latlng.lat, latlng.lon]}
+            zoom={13}
+            scrollWheelZoom={false}
+            style={{ height: "400px", width: "100%" }}
+          >
+            <TileLayer
+              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={[latlng.lat, latlng.lon]}>
+              <Popup>
+                Coach Dennis is here: <br />
+                {location.city}, {location.state}
+              </Popup>
+            </Marker>
+          </MapContainer>
+        </>
+      ) : (
+        <p className="text-center text-muted">Fetching location...</p>
+      )}
     </div>
   );
-}
+};
 
 export default LocationDetector;

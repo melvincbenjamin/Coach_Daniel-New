@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from 'react-helmet-async';
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -9,6 +10,21 @@ function DennisServices() {
   }, []);
 
   return (
+    <>
+    <Helmet>
+        <title>Coach Dennis - Professional Tennis & Padel Coach in Lagos</title>
+        <meta
+          name="description"
+          content="Train with Coach Dennis at Dennis Tennis Academy. Top-rated tennis & padel coaching in Lagos, Nigeria for beginners and pros."
+        />
+        <meta
+          name="keywords"
+          content="Coach Dennis, Tennis Coach Lagos, Tennis Academy Nigeria, Padel Coach, Tennis training for kids, Best tennis coach in Nigeria"
+        />
+        <meta name="author" content="Coach Dennis Tennis Academy" />
+        <link rel="canonical" href="https://yourdomain.com/" />
+      </Helmet>
+
     <section className="py-5" style={{ backgroundColor: "#fff" }}>
       <Container>
         <Row>
@@ -60,6 +76,7 @@ function DennisServices() {
         `}</style>
       </Container>
     </section>
+    </>
   );
 }
 

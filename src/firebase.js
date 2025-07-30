@@ -1,22 +1,16 @@
-// src/firebase.js
-
-// Import the required Firebase functions
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAaZshYdBlfoQs-PhZHUCu8PyYhMjL1NZs",
-  authDomain: "dennis-testimonials.firebaseapp.com",
-  projectId: "dennis-testimonials",
-  storageBucket: "dennis-testimonials.firebasestorage.app",
-  messagingSenderId: "1093738229096",
-  appId: "1:1093738229096:web:ed789acdcc1c7cc71b3add",
-  measurementId: "G-RQ3FH47ZGP"
+  apiKey: "AIzaSyAZcgXgWqmHN--6jYafYS-H-WwoEF1Mzys",
+  authDomain: "coach-dennis-tracker.firebaseapp.com",
+  projectId: "coach-dennis-tracker",
+  storageBucket: "coach-dennis-tracker.appspot.com",  // ✅ fixed
+  messagingSenderId: "878467675742",
+  appId: "1:878467675742:web:cde148c89311c2d4fca6cf"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-// ✅ Initialize Firestore and export it
-export const db = getFirestore(app);
+export { db };

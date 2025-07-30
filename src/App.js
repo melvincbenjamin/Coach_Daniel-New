@@ -13,6 +13,12 @@ import Media from './pages/Media';
 import Services from './pages/Services';
 import Testimonial from './pages/Testimonial';
 import Contact from './pages/Contact';
+import LocationDetector from './components/LocationDetector';
+import CoachDennisLiveMap from "./components/CoachDennisLiveMap";
+import Login from "../src/components/Login";
+import LocationViewer from './components/LocationViewers';
+
+
 
 function App() {
   return (
@@ -21,14 +27,18 @@ function App() {
       <HelmetProvider />
       <div style={{ position: 'relative', minHeight: '100vh', paddingTop: '56px' }}>
         <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/location" element={<LocationViewer />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/media" element={<Media />} />
           <Route path="/services" element={<Services />} />
           <Route path="/testimonials" element={<Testimonial />} />
           <Route path="/contacts" element={<Contact />} />
+          <Route path="/location" element={<CoachDennisLiveMap />} />
         </Routes>
       </div>
+      <LocationDetector />
       <Footer />  {/* Footer Added Here */}
     </Router>
   );

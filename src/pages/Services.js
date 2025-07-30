@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from 'react-helmet';
 import With_Kids from '../assets/With_Kids.jpg';
 import tennis3 from '../assets/tennis3.jpg';
 import padelVideo from '../assets/padelVideo.mp4'
@@ -20,6 +21,20 @@ function ServicesComponent() {
 
   return (
     <div> 
+      <Helmet>
+        <title>Coach Dennis - Professional Tennis & Padel Coach in Lagos</title>
+        <meta
+          name="description"
+          content="Train with Coach Dennis at Dennis Tennis Academy. Top-rated tennis & padel coaching in Lagos, Nigeria for beginners and pros."
+        />
+        <meta
+          name="keywords"
+          content="Coach Dennis, Tennis Coach Lagos, Tennis Academy Nigeria, Padel Coach, Tennis training for kids, Best tennis coach in Nigeria"
+        />
+        <meta name="author" content="Coach Dennis Tennis Academy" />
+        <link rel="canonical" href="https://yourdomain.com/" />
+      </Helmet>
+
       <div>
         <DennisServices />
       </div>

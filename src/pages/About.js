@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from 'react-helmet';
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { Briefcase, People, Layers, Award } from "react-bootstrap-icons";
 import AOS from "aos";
@@ -19,6 +20,21 @@ function AboutSection() {
   };
 
   return (
+    <>
+    <Helmet>
+        <title>Coach Dennis - Professional Tennis & Padel Coach in Lagos</title>
+        <meta
+          name="description"
+          content="Train with Coach Dennis at Dennis Tennis Academy. Top-rated tennis & padel coaching in Lagos, Nigeria for beginners and pros."
+        />
+        <meta
+          name="keywords"
+          content="Coach Dennis, Tennis Coach Lagos, Tennis Academy Nigeria, Padel Coach, Tennis training for kids, Best tennis coach in Nigeria"
+        />
+        <meta name="author" content="Coach Dennis Tennis Academy" />
+        <link rel="canonical" href="https://yourdomain.com/" />
+      </Helmet>
+
     <section>
       {/* Full-Width Image */}
       <div data-aos="zoom-in-up">
@@ -102,6 +118,7 @@ function AboutSection() {
         </Row>
       </Container>
     </section>
+    </>
   );
 }
 export default AboutSection;

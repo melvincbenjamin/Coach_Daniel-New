@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from 'react-helmet';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { db } from "../firebase";
@@ -30,6 +31,21 @@ const Testimonial = () => {
   };
 
   return (
+    <>
+    <Helmet>
+        <title>Coach Dennis - Professional Tennis & Padel Coach in Lagos</title>
+        <meta
+          name="description"
+          content="Train with Coach Dennis at Dennis Tennis Academy. Top-rated tennis & padel coaching in Lagos, Nigeria for beginners and pros."
+        />
+        <meta
+          name="keywords"
+          content="Coach Dennis, Tennis Coach Lagos, Tennis Academy Nigeria, Padel Coach, Tennis training for kids, Best tennis coach in Nigeria"
+        />
+        <meta name="author" content="Coach Dennis Tennis Academy" />
+        <link rel="canonical" href="https://yourdomain.com/" />
+      </Helmet>
+
     <div className="container my-5 bg-black p-4 rounded shadow">
       <h2 className="text-center mb-5 text-white">What My Students Say</h2>
       <div className="row">
@@ -63,6 +79,7 @@ const Testimonial = () => {
         <button type="submit" className="btn btn-light w-100">Submit</button>
       </form>
     </div>
+    </>
   );
 };
 

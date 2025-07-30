@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Row, Col, Button, Container, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import vision from "../assets/emma-raducanu-lta-youth-ambassador.webp";
-import mission from "../assets/paddle-racket-ball-ready-play-260nw-2518995793.webp";
+import vision from "../assets/hand-holding-tennis-racket-balls.jpg";
+import mission from "../assets/backgroundImage.jpg";
 import DanielLittleKid from "../assets/DanielLittleGirl.mp4";
 import HeroImage from "../assets/With_Kids.jpg";
 
-import DanielVideo1 from '../assets/DanielVideo1.mp4';
 import DanielVideo2 from '../assets/DanielVideo2.mp4';
 //import DanielVideo3 from '../assets/DanielVideo3.mp4';
 import DanielVideo4 from '../assets/DanielVideo4.mp4';
@@ -28,11 +27,19 @@ function HeroSection() {
   return (
     <div>
        <Helmet>
-        <title>Coach Dennis | Tennis & Padel Coach</title>
-        <meta name="description" content="Official site of Coach Dennis – a Tennis & Padel Coach based in Dubai, originally from Nigeria, offering global sports mentorship and training." />
-        <meta name="keywords" content="Coach Dennis, Tennis coach Dubai, Padel coach, Tennis Nigeria, Tennis academy, Tennis in UAE, Dubai tennis coach, Tennis lessons" />
-        <link rel="canonical" href="https://yourwebsite.com/about" />
+        <title>Coach Dennis - Professional Tennis & Padel Coach in Lagos</title>
+        <meta
+          name="description"
+          content="Train with Coach Dennis at Dennis Tennis Academy. Top-rated tennis & padel coaching in Lagos, Nigeria for beginners and pros."
+        />
+        <meta
+          name="keywords"
+          content="Coach Dennis, Tennis Coach Lagos, Tennis Academy Nigeria, Padel Coach, Tennis training for kids, Best tennis coach in Nigeria"
+        />
+        <meta name="author" content="Coach Dennis Tennis Academy" />
+        <link rel="canonical" href="https://yourdomain.com/" />
       </Helmet>
+
       {/* === HERO FULLSCREEN SECTION === */}
       <section style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
         {/* Background image */}
@@ -133,7 +140,7 @@ function HeroSection() {
     <div className="col-md-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
       <h2 className="fw-bold text-black text-center text-md-start">Vision</h2>
       <p className="text-black mt-3 text-center text-md-start">
-        To become a globally recognized Tennis and Padel coaching leader, originating from Nigeria, based in Dubai, and expanding across the world, especially the United States by building a network of elite athletes, passionate learners, and inclusive sports communities united by excellence, mentorship, and love for the game.
+        To become a globally recognized Tennis and Padel coaching leader, originating from Nigeria, Based in Abu Dhabi, in the United Arab Emirates. And expanding across the world, especially the United States by building a network of elite athletes, passionate learners, and inclusive sports communities united by excellence, mentorship, and love for the game.
       </p>
     </div>
     {/* Vision Image */}
@@ -156,7 +163,7 @@ function HeroSection() {
         </motion.h3>
 
         <Row className="g-4">
-          {[DanielVideo1, DanielVideo2, DanielVideo4].map((video, index) => (
+          {[DanielVideo2, DanielVideo4].map((video, index) => (
             <Col key={index} xs={12} sm={6} md={4}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}

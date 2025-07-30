@@ -1,6 +1,5 @@
 import { React, useEffect } from "react";
-// ❌ Wrong
-// import { SiGmail } from 'react-bootstrap-icons';
+import { Helmet } from 'react-helmet';
 
 // ✅ Correct
 import { SiGmail } from 'react-icons/si';
@@ -15,6 +14,21 @@ function Contact() {
     }, []);
 
   return (
+    <>
+    <Helmet>
+        <title>Coach Dennis - Professional Tennis & Padel Coach in Lagos</title>
+        <meta
+          name="description"
+          content="Train with Coach Dennis at Dennis Tennis Academy. Top-rated tennis & padel coaching in Lagos, Nigeria for beginners and pros."
+        />
+        <meta
+          name="keywords"
+          content="Coach Dennis, Tennis Coach Lagos, Tennis Academy Nigeria, Padel Coach, Tennis training for kids, Best tennis coach in Nigeria"
+        />
+        <meta name="author" content="Coach Dennis Tennis Academy" />
+        <link rel="canonical" href="https://yourdomain.com/" />
+      </Helmet>
+
     <section id="contact" className="py-5 text-center text-md-left" style={{ backgroundColor: '#ffffff', width: '100vw' }}>
       <Container>
         <h6 className="text-uppercase text-secondary">Get In Touch</h6>
@@ -51,7 +65,7 @@ function Contact() {
           <Col xs={12} md={8} data-aos="fade-up">
             <Card className="p-4 shadow-sm border-0 rounded-lg" style={{ backgroundColor: "#000000", color: "#fff" }}>
               <Card.Body>
-              <Form action="https://formsubmit.co/melvinbenjamin777@gmail.com" method="POST">
+              <Form action="https://formsubmit.co/danielokpe607@gmail.com" method="POST">
   {/* Optional settings */}
   <input type="hidden" name="_captcha" value="false" />
   <input type="hidden" name="_template" value="table" />
@@ -113,6 +127,7 @@ function Contact() {
         </Row>
       </Container>
     </section>
+    </>
   );
 }
 
