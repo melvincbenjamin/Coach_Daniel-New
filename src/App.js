@@ -13,11 +13,8 @@ import Media from './pages/Media';
 import Services from './pages/Services';
 import Testimonial from './pages/Testimonial';
 import Contact from './pages/Contact';
-import LocationDetector from './components/LocationDetector';
-import CoachDennisLiveMap from "./components/CoachDennisLiveMap";
 import Login from "../src/components/Login";
-import LocationViewer from './components/LocationViewers';
-
+import Map from './pages/Map';
 
 
 function App() {
@@ -28,17 +25,19 @@ function App() {
       <div style={{ position: 'relative', minHeight: '100vh', paddingTop: '56px' }}>
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/location" element={<LocationViewer />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/media" element={<Media />} />
           <Route path="/services" element={<Services />} />
           <Route path="/testimonials" element={<Testimonial />} />
           <Route path="/contacts" element={<Contact />} />
-          <Route path="/location" element={<CoachDennisLiveMap />} />
         </Routes>
       </div>
-      <LocationDetector />
+      <div style={{
+        marginTop: '20px'
+      }}>
+      <Map />
+      </div>
       <Footer />  {/* Footer Added Here */}
     </Router>
   );

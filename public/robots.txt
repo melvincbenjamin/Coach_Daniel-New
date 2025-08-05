@@ -1,7 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
 
-User-agent: *
-Allow: /
-Sitemap: https://yourwebsite.com/sitemap.xml
+Sitemap: https://nigeria-tennis-association.web.app/sitemap.xml
