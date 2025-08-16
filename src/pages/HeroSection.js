@@ -6,10 +6,11 @@ import vision from "../assets/hand-holding-tennis-racket-balls.jpg";
 import mission from "../assets/backgroundImage.jpg";
 import DanielLittleKid from "../assets/DanielLittleGirl.mp4";
 import HeroImage from "../assets/With_Kids.jpg";
-
 import DanielVideo2 from '../assets/DanielVideo2.mp4';
 import DanielVideo4 from '../assets/DanielVideo4.mp4';
 import backgroundImage from '../assets/backgroundImage.jpg'; // adjust path as needed
+import NewDennistennis from "../assets/NewDennistennis.mp4";
+import NewDennistennis2 from "../assets/NewDennistennis2.mp4";
 
 
 function HeroSection() {
@@ -26,7 +27,7 @@ function HeroSection() {
   return (
     <div>
        <Helmet>
-  <title>Coach Dennis - Professional Tennis & Padel Coach in Abu Dhabi, United Arab Emirates</title>
+  <title>Coach Dennis, Professional Tennis & Padel Coach in Abu Dhabi, United Arab Emirates</title>
   <meta
     name="description"
     content="Train with Coach Dennis at Dennis Tennis Academy. Top-rated tennis & padel coaching in Abu Dhabi, UAE, for beginners and pros."
@@ -203,7 +204,7 @@ function HeroSection() {
         </motion.h3>
 
         <Row className="g-4">
-          {[DanielVideo2, DanielVideo4].map((video, index) => (
+          {[NewDennistennis, DanielVideo2, DanielVideo4, NewDennistennis2].map((video, index) => (
             <Col key={index} xs={12} sm={6} md={4}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
