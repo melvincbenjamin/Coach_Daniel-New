@@ -10,8 +10,8 @@ import DanielVideo2 from '../assets/DanielVideo2.mp4';
 import DanielVideo4 from '../assets/DanielVideo4.mp4';
 import backgroundImage from '../assets/backgroundImage.jpg'; // adjust path as needed
 import NewDennistennis from "../assets/NewDennistennis.mp4";
-import NewDennistennis2 from "../assets/NewDennistennis2.mp4";
-
+import updateDanielTennis from "../assets/updateDanielTennis2.mp4";
+import updateDanielTennis3 from "../assets/updateDanielTennis3.mp4";
 
 function HeroSection() {
   const [showVideo, setShowVideo] = useState(false);
@@ -204,7 +204,7 @@ function HeroSection() {
         </motion.h3>
 
         <Row className="g-4">
-          {[NewDennistennis, DanielVideo2, DanielVideo4, NewDennistennis2].map((video, index) => (
+          {[NewDennistennis, DanielVideo2, DanielVideo4, updateDanielTennis, updateDanielTennis3].map((video, index) => (
             <Col key={index} xs={12} sm={6} md={4}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}

@@ -4,8 +4,8 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { Briefcase, People, Layers, Award } from "react-bootstrap-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import julius3 from "../assets/Coach_Daniel.jpg";
-import julius_student from "../assets/DanielC.jpg";
+import Coach_Daniel from "../assets/Coach_Daniel.jpg";
+import DanielC from "../assets/DanielC.jpg";
 
 function AboutSection() {
   useEffect(() => {
@@ -80,8 +80,8 @@ function AboutSection() {
       {/* Full-Width Image */}
       <div data-aos="zoom-in-up">
         <img
-          src={julius_student}
-          alt="Julius S Adeleke"
+          src={DanielC}
+          alt="Dennis Tennis"
           className="img-fluid"
           style={{ width: "100%", height: "100vh", objectFit: "cover", paddingTop: "20px" }}
         />
@@ -93,7 +93,7 @@ function AboutSection() {
 <Col xs={12} md={5} className="d-flex justify-content-center mb-4 mb-md-0 mt-md-n4 mt-lg-n5">
   <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
   <img
-    src={julius3}
+    src={Coach_Daniel}
     alt="Coach Dennis"
     className="img-fluid"
     style={{

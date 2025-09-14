@@ -25,7 +25,7 @@ function Navbars() {
             alt="Logo"
             className="rounded"
             style={{ height: "40px", width: "auto" }}
-          />
+          />DENNISTENNIS
         </Navbar.Brand>
 
         {/* Hamburger */}

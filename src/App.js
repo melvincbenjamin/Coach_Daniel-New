@@ -9,7 +9,6 @@ import { HelmetProvider } from 'react-helmet-async';
 // Import your pages
 import Home from './pages/Home';
 import About from './pages/About';
-import Media from './pages/Media';
 import Services from './pages/Services';
 import Testimonial from './pages/Testimonial';
 import Contact from './pages/Contact';
@@ -27,7 +26,6 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/media" element={<Media />} />
           <Route path="/services" element={<Services />} />
           <Route path="/testimonials" element={<Testimonial />} />
           <Route path="/contacts" element={<Contact />} />
