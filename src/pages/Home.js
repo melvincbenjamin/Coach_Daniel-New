@@ -14,7 +14,7 @@ function Home() {
   {/* ✅ Open Graph Tags */}
   <meta property="og:title" content="Coach Dennis Tennis Academy" />
   <meta property="og:description" content="Train with Coach Dennis at Dennis Tennis Academy. Top-rated tennis & padel coaching in Abu Dhabi, UAE, for beginners and pros." />
-  <meta property="og:image" content="https://yourdomain.com/assets/With_Kids.jpg" />
+  <meta property="og:image" content="https://denisstennis.com/assets/With_Kids.jpg" />
   <meta property="og:url" content="https://coachdennisacademy.com" />
   <meta property="og:type" content="website" />
 
@@ -22,7 +22,7 @@ function Home() {
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Coach Dennis Tennis Academy" />
   <meta name="twitter:description" content="Train with Coach Dennis at Dennis Tennis Academy. Top-rated tennis & padel coaching in Abu Dhabi, UAE, for beginners and pros." />
-  <meta name="twitter:image" content="https://yourdomain.com/assets/With_Kids.jpg" />
+  <meta name="twitter:image" content="https://denisstennis.com/assets/With_Kids.jpg" />
 
   {/* ✅ SEO Keywords and Author */}
   <meta

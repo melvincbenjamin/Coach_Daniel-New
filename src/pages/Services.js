@@ -41,9 +41,9 @@ function ServicesComponent() {
         />
         <meta
           property="og:image"
-          content="https://yourdomain.com/assets/With_Kids.jpg"
+          content="https://denisstennis.com/assets/With_Kids.jpg"
         />
-        <meta property="og:url" content="https://coachdennisacademy.com" />
+        <meta property="og:url" content="https://denisstennis.com" />
         <meta property="og:type" content="website" />
 
         {/* ✅ Twitter Card (optional) */}
@@ -55,7 +55,7 @@ function ServicesComponent() {
         />
         <meta
           name="twitter:image"
-          content="https://yourdomain.com/assets/With_Kids.jpg"
+          content="https://denisstennis.com/assets/With_Kids.jpg"
         />
 
         {/* ✅ SEO Keywords and Author */}
@@ -64,7 +64,7 @@ function ServicesComponent() {
           content="Coach Dennis, Tennis Coach Abu Dhabi, Padel Coach UAE, Tennis lessons Abu Dhabi, Kids Tennis Coaching, Tennis Academy UAE"
         />
         <meta name="author" content="Coach Dennis Tennis Academy" />
-        <link rel="canonical" href="https://coachdennisacademy.com/" />
+        <link rel="canonical" href="https://denisstennis.com/" />
 
         {/* ✅ Structured Data */}
         <script
@@ -75,7 +75,7 @@ function ServicesComponent() {
               "@type": "Person",
               name: "Coach Dennis",
               jobTitle: "Tennis and Padel Coach",
-              url: "https://coachdennisacademy.com",
+              url: "https://denisstennis.com",
               sameAs: ["https://www.instagram.com/denistennis_/"],
               worksFor: {
                 "@type": "SportsOrganization",

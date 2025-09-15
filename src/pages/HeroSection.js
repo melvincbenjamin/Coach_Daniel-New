@@ -35,15 +35,15 @@ function HeroSection() {
   {/* ✅ Open Graph Tags */}
   <meta property="og:title" content="Coach Dennis Tennis Academy" />
   <meta property="og:description" content="Train with Coach Dennis at Dennis Tennis Academy. Top-rated tennis & padel coaching in Abu Dhabi, UAE, for beginners and pros." />
-  <meta property="og:image" content="https://yourdomain.com/assets/With_Kids.jpg" />
-  <meta property="og:url" content="https://coachdennisacademy.com" />
+  <meta property="og:image" content="https://denisstennis/assets/With_Kids.jpg" />
+  <meta property="og:url" content="https://denisstennis.com" />
   <meta property="og:type" content="website" />
 
   {/* ✅ Twitter Card (optional) */}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Coach Dennis Tennis Academy" />
   <meta name="twitter:description" content="Train with Coach Dennis at Dennis Tennis Academy. Top-rated tennis & padel coaching in Abu Dhabi, UAE, for beginners and pros." />
-  <meta name="twitter:image" content="https://yourdomain.com/assets/With_Kids.jpg" />
+  <meta name="twitter:image" content="https://denisstennis/assets/With_Kids.jpg" />
 
   {/* ✅ SEO Keywords and Author */}
   <meta
@@ -51,7 +51,7 @@ function HeroSection() {
     content="Coach Dennis, Tennis Coach Abu Dhabi, Padel Coach UAE, Tennis lessons Abu Dhabi, Kids Tennis Coaching, Tennis Academy UAE"
   />
   <meta name="author" content="Coach Dennis Tennis Academy" />
-  <link rel="canonical" href="https://coachdennisacademy.com/" />
+  <link rel="canonical" href="https://denisstennis.com/" />
 
   {/* ✅ Structured Data (Schema Markup for Google) */}
   <script
@@ -62,7 +62,7 @@ function HeroSection() {
         "@type": "Person",
         "name": "Coach Dennis",
         "jobTitle": "Tennis and Padel Coach",
-        "url": "https://coachdennisacademy.com",
+        "url": "https://denisstennis.com",
         "sameAs": ["https://www.instagram.com/denistennis_/"],
         "worksFor": {
           "@type": "SportsOrganization",
