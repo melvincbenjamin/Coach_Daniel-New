@@ -83,7 +83,7 @@ function AboutSection() {
           src={DanielC}
           alt="Dennis Tennis"
           className="img-fluid"
-          style={{ width: "100%", height: "100vh", objectFit: "cover", paddingTop: "20px" }}
+          style={{ width: "100%", height: "80vh", objectFit: "cover", paddingTop: "20px" }}
         />
       </div>
 

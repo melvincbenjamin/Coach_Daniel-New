@@ -14,7 +14,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import DennisServices from "../pages/DennisServices";
 import updatePicture from "../assets/updatepicture.jpg";
-import updatePicture3 from "../assets/updatepicture3.jpg";
+import updatePicture4 from "../assets/updatepicture4.jpg";
 
 function ServicesComponent() {
   useEffect(() => {
@@ -171,10 +171,10 @@ function ServicesComponent() {
                     className="img-fluid rounded"
                   />
                   <img
-                    src={updatePicture3}
+                    src={updatePicture4}
                     alt="Padel session"
                     className="img-fluid rounded mt-5"
-                    style={{ width: "100%" }}
+                    style={{ width: "100%", height: "250px" }}
                   />
                 </Card.Body>
               </Card>
